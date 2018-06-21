@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-size: 14px !important;
 }
 
 body {
@@ -49,19 +50,18 @@ body {
 .git-user-info {
   border-radius: 3px;
   padding-bottom: 15px;
-  /* border-bottom:1px solid #ccc; */
+  display: none;
 }
 
 .git-user-info .deatils {
   padding: 10px 20px 0 20px;
-  border-top:1px solid #ccc;
   display: flex;
   align-items: flex-start;
   margin-top: 10px;
 }
 
-.git-user-info h1 {
-  display: none;
+.git-user-info .deatils.active {
+  background-color: #f4f4f4;
 }
 
 .repo-name {
@@ -77,9 +77,26 @@ body {
   align-items: flex-start;
   display: none;
   padding: 20px 0 10px 0;
+  background-color: #f4f4f4;
 }
 
-.new-issues-input {
-  width:64%;
-  margin-right: 10px;
+.issue-items-input {
+  padding-bottom: 10px;
+}
+
+.avatar-img {
+  padding-right: 20px;
+}
+
+.avatar-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.error {
+  padding: 20px 0 10px 15px;
+}
+
+.back-to-search {
+  margin: 0 0 10px 15px;
 }

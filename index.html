@@ -9,6 +9,7 @@
         <title>Signin Template for Bootstrap</title>
 
         <link href="./assets/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/bootstrap.min-1.css" rel="stylesheet">
         <link href="./assets/react-exercise.css" rel="stylesheet">
     </head>
 
@@ -16,41 +17,72 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <form class="form-signin" id="getGitUser">
+                    <!-- <form class="form-signin" id="getGitUser">
                         <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
                         <label for="inputUserName" class="sr-only">Github Username</label>
                         <input type="username" id="inputUserName" class="form-control" placeholder="Github username" required="" autofocus="">
                         <button class="btn btn-lg btn-primary btn-block" id="getUser" type="submit">Sign In</button>
-                    </form>
-                    <!-- <form id="getGitUser" class="form-horizontal" role="form">  
+                    </form> -->
+                    <form id="getGitUser" class="form-horizontal" role="form">  
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                <div class="panel-title">Sign In</div>
+                                <div class="panel-title">User Repository</div>
                             </div>
                             <div style="padding-top:30px" class="panel-body">                                
                                 <div style="margin-bottom: 25px" class="input-group">
                                     <span class="input-group-addon"></span>
-                                    <input id="inputUserName" type="text" class="form-control" name="inputUserName" value="" placeholder="Github Username" />                                        
+                                    <input id="inputUserName" type="text" class="form-control" name="inputUserName" value="" placeholder="Enter Your Github Username" />                                        
                                 </div>
                                 <div style="margin-top:10px" class="form-group">
                                     <div class="col-sm-12 controls">
-                                        <button id="getUser" href="#" class="btn btn-success">Login</button>
+                                        <button id="getUser" href="#" class="btn btn-success">Submit</button>
                                     </div>
                                 </div> 
                             </div>                     
                         </div>
-                    </form> -->
+                    </form>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div id="git-user-info" class="git-user-info">
+                    <!-- <div id="git-user-info" class="git-user-info">
                         <h1 class="h3 mb-3 font-weight-normal">User Repositories List</h1>
+                    </div> -->
+
+                    <div id="git-user-info" class="panel panel-info git-user-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Repositories Detials</div>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
+
+        <!-- Model window -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Issue created. We will get back to you soon.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <script src="./assets/jquery-3.3.1.min.js"></script>
+        <script src="./assets/bootstrap.min.js"></script>
         <script src="./assets/react-exercise.js"></script>
     </body>
 </html>
