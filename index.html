@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-ember-extension="1">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Signin Template for Bootstrap</title>
+
+        <link href="./assets/bootstrap.min.css" rel="stylesheet">
+        <link href="./assets/react-exercise.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form class="form-signin" id="getGitUser">
+                        <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+                        <label for="inputUserName" class="sr-only">Github Username</label>
+                        <input type="username" id="inputUserName" class="form-control" placeholder="Github username" required="" autofocus="">
+                        <button class="btn btn-lg btn-primary btn-block" id="getUser" type="submit">Sign In</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="git-user-info" class="git-user-info">
+                        <h1 class="h3 mb-3 font-weight-normal">User Repositories List</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/jquery-3.3.1.min.js"></script>
+        <script src="./assets/react-exercise.js"></script>
+    </body>
+</html>
