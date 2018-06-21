@@ -49,7 +49,7 @@ body {
 .git-user-info {
   border-radius: 3px;
   padding-bottom: 15px;
-  border-bottom:1px solid #ccc;
+  /* border-bottom:1px solid #ccc; */
 }
 
 .git-user-info .deatils {

@@ -11,14 +11,14 @@ $(document).ready(function() {
                 client_secret:'14dbed36660a4fe2c87771f7a15a94e94ca7d970'
             }
         }).done(function (response) {
-            console.log(response);
+            // console.log(response);
 
             $('.git-user-info h1').show();
 
             $.each(response, function(index, repo) {
                 $('#git-user-info').append(`
                     <div class="deatils">
-                        <div class="repo-name">${repo.name}</div>
+                        <div class="repo-name" data-reponame="${repo.name}">${repo.name}</div>
                         <a class="btn btn-outline-primary btn-new-issues" href="#">New Issues</a>
                     </div>
                     <form class="new-issues-form" id="issuesGitUser">
@@ -36,16 +36,25 @@ $(document).ready(function() {
             $(".submit-issue").bind('click', function(e) {
                 e.preventDefault();
         
-                var getIssues = $('#inputNewIssues').val();
-                console.log(getIssues);
-        
-            });
+                var getIssues = $('#inputNewIssues').val(),
+                    getRepoName = $('.repo-name').data('reponame'),
+                    repoUrl = 'https://api.github.com/repos/' + username + '/' + getRepoName + '/issues';
 
+                $.ajax ({
+                    type: 'POST',
+                    url: repoUrl,
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("Authorization", "token b5b6abb88a99cf990a7825883c417602e464aa96");
+                    },
+                    data: JSON.stringify({
+                        title: getIssues
+                    })
+                }).done(function(data){
+                     console.log('pass');
+                }).fail(function(){
+                    console.log('fail');
+                });
+            });
         });
     });
-
-    // alert();
-
-    
-
 });
